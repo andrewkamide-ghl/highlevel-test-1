@@ -1,0 +1,160 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #1a1d23;
+  padding: 0 20px;
+  height: 52px;
+  flex-shrink: 0;
+  border-bottom: 1px solid #2d3139;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  height: 100%;
+}
+
+.header-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  padding-right: 16px;
+  border-right: 1px solid #3a3f4a;
+}
+
+.header-title {
+  color: white;
+  white-space: nowrap;
+}
+
+.header-nav {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  gap: 2px;
+}
+
+.nav-tab {
+  height: 100%;
+  padding: 0 14px;
+  background: none;
+  border: none;
+  color: #9ba3af;
+  font-size: 13.5px;
+  cursor: pointer;
+  white-space: nowrap;
+  position: relative;
+  transition: color 0.15s;
+}
+
+.nav-tab:hover {
+  color: #e5e7eb;
+}
+
+.nav-tab--active {
+  color: #ffffff;
+}
+
+.nav-tab--active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: #3b82f6;
+  border-radius: 2px 2px 0 0;
+}
+
+/* Action buttons */
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.action-btn {
+  position: relative;
+  width: 34px;
+  height: 34px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.15s;
+}
+
+.action-btn:hover {
+  opacity: 0.85;
+}
+
+.action-btn--green {
+  background-color: #22c55e;
+  color: white;
+}
+
+.action-btn--blue {
+  background-color: #3b82f6;
+  color: white;
+}
+
+.action-btn--green-robot {
+  background-color: #16a34a;
+  color: white;
+}
+
+.action-btn--orange {
+  background-color: #f59e0b;
+  color: white;
+}
+
+.action-btn--blue-q {
+  background-color: #2563eb;
+  color: white;
+}
+
+.badge {
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  font-size: 10px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  border: 1.5px solid #1a1d23;
+}
+
+.badge--green {
+  background-color: #22c55e;
+}
+
+.badge--orange {
+  background-color: #f97316;
+}
+
+.user-avatar {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  color: white;
+  font-size: 14px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  margin-left: 4px;
+}
