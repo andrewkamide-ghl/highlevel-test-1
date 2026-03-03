@@ -30,6 +30,11 @@
   align-items: center;
   justify-content: space-between;
   padding: 22px 24px;
+  width: 100%;
+  background: none;
+  border: none;
+  font-family: inherit;
+  text-align: left;
   cursor: pointer;
   transition: background-color 0.15s;
 }
@@ -95,20 +100,16 @@
 }
 
 .step-chevron {
-  background: none;
-  border: none;
   color: #9ca3af;
-  cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 4px;
   flex-shrink: 0;
-  transition: color 0.15s;
   margin-left: 12px;
+  transition: color 0.15s;
 }
 
-.step-chevron:hover {
+.step-item:hover .step-chevron {
   color: #374151;
 }
 
@@ -121,6 +122,7 @@
   height: 44px;
   border-radius: 50%;
   background-color: #22c55e;
+  border: none;
   display: flex;
   align-items: center;
   justify-content: center;

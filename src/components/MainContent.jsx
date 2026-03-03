@@ -2,7 +2,7 @@ import './MainContent.css'
 
 function PlusCircleIcon() {
   return (
-    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8">
+    <svg aria-hidden="true" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8">
       <circle cx="12" cy="12" r="10" />
       <line x1="12" y1="8" x2="12" y2="16" />
       <line x1="8" y1="12" x2="16" y2="12" />
@@ -12,7 +12,7 @@ function PlusCircleIcon() {
 
 function SignalIcon() {
   return (
-    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8">
+    <svg aria-hidden="true" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8">
       <path d="M1 6c0 0 5-4 11-4s11 4 11 4" />
       <path d="M5 10c0 0 3-2.5 7-2.5s7 2.5 7 2.5" />
       <path d="M9 14c0 0 1-1 3-1s3 1 3 1" />
@@ -23,7 +23,7 @@ function SignalIcon() {
 
 function PhoneIcon() {
   return (
-    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8">
+    <svg aria-hidden="true" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8">
       <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.81 19.79 19.79 0 01.1 2.18 2 2 0 012.08 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.2 7.76a16 16 0 006 6l1.13-1.13a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92z" />
     </svg>
   )
@@ -31,7 +31,7 @@ function PhoneIcon() {
 
 function ChevronRightIcon() {
   return (
-    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+    <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
       <polyline points="9 18 15 12 9 6" />
     </svg>
   )
@@ -72,9 +72,9 @@ export default function MainContent() {
 
         <div className="steps-card">
           {steps.map((step, index) => (
-            <div key={step.id} className={`step-item ${index < steps.length - 1 ? 'step-item--bordered' : ''}`}>
+            <button key={step.id} className={`step-item ${index < steps.length - 1 ? 'step-item--bordered' : ''}`}>
               <div className="step-left">
-                <div className="step-number">{step.id}</div>
+                <div className="step-number" aria-hidden="true">{step.id}</div>
                 <div
                   className="step-icon"
                   style={{ color: step.iconColor, backgroundColor: step.iconBg }}
@@ -86,19 +86,19 @@ export default function MainContent() {
                   <p className="step-description">{step.description}</p>
                 </div>
               </div>
-              <button className="step-chevron">
+              <span className="step-chevron" aria-hidden="true">
                 <ChevronRightIcon />
-              </button>
-            </div>
+              </span>
+            </button>
           ))}
         </div>
       </div>
 
-      <div className="chat-bubble">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="white">
+      <button className="chat-bubble" aria-label="Open chat">
+        <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="white">
           <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z" />
         </svg>
-      </div>
+      </button>
     </main>
   )
 }
