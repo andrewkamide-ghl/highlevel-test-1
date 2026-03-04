@@ -1,8 +1,7 @@
-*, *::before, *::after {
-  box-sizing: border-box;
-}
+@import "tailwindcss";
 
 :root {
+  --color-primary: #0052CC;
   font-family: -apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
@@ -12,17 +11,20 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   min-width: 320px;
-  min-height: 100vh;
-  background-color: #f3f4f6;
+  background-color: #FAFAFA;
   color: #111827;
 }
 
 #root {
   width: 100%;
-  height: 100vh;
+  min-height: 100dvh;
   display: flex;
   flex-direction: column;
 }
@@ -37,4 +39,16 @@ h1, h2, h3, h4, h5, h6 {
 
 p {
   margin: 0;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
 }
